@@ -1,0 +1,35 @@
+% TODO
+% 关于节添加后，页眉页脚在当前也不能显示，下一页显示的问题
+\documentclass[a4paper, twocolumn, AutoFakeBold]{cvertbook} % openany 参数消除目录后多出的空白页 会影响页眉页脚 AutoFakeBold 开启伪粗体
+\setCJKmainfont{中华书局宋体00平面}
+\setCJKfallbackfamilyfont{\CJKrmdefault}
+{{中华书局宋体02平面},{中华书局宋体15平面}}
+%\usepackage{hyperref}
+%\usepackage{amsmath}
+%\usepackage{graphicx}
+%\nopunct    %啟用無標點模式
+
+%\judou      %启用句读模式，默认为不启用
+
+\setlength{\vertbookoffset}{0cm}    %设置装订线距离，默认为1cm
+\setlength{\parindent}{2em}
+\linespread{1.5}
+\setlength\tabcolsep{2pt}
+\setlength\topsep{0pt}
+\setlength\partopsep{-2em}
+\setlength\columnsep{0.8cm}
+
+\begin{document}
+
+\title{伤寒杂病论} % Encyclopedia of Knowledge of Chinese Studies
+\author{张仲景}
+%\tableofparts
+
+\tableofcontents
+
+\inmain % 启用时在双栏排版中启用另起一栏，而不另起一页
+% 此处为最上层文件
+\part{辨太阳病脉证并治}
+\input{./part/1辨太阳病脉证并治.tex}
+
+\end{document}
